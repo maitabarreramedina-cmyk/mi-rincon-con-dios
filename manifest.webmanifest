@@ -1,0 +1,30 @@
+{
+ "name": "Mi rincón con Dios · Agenda de fe 2027",
+ "short_name": "Mi rincón",
+ "description": "Agenda de fe para estar con Dios cada día",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "any",
+ "background_color": "#FBF4F2",
+ "theme_color": "#FBF4F2",
+ "lang": "es",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
