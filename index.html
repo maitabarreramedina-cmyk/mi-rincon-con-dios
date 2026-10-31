@@ -1093,6 +1093,7 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{document.
   <form id="gForm" autocomplete="off"><input id="gIn" type="text" inputmode="text" autocapitalize="characters" spellcheck="false" placeholder="Tu código" aria-label="Código de acceso"><button type="submit">Entrar</button></form>
   <p class="g-err" id="gErr" hidden>Ese código no es correcto. Revísalo en el archivo de tu compra.</p>
   <p class="g-help">Solo se pide la primera vez en cada dispositivo.</p>
+  <p class="g-help g-lng" hidden><a href="en/">English version →</a></p>
  </div>
 </div>
 <style>
@@ -1119,6 +1120,7 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{document.
   var ok=false;try{ok=localStorage.getItem(OK)==="1";}catch(e){}
   var g=document.getElementById("gate");
   var L=window.htcLang||"es";[].forEach.call(g.querySelectorAll("[data-gl]"),function(b){if(b.getAttribute("data-gl")===L)b.className="on";b.onclick=function(){if(b.getAttribute("data-gl")!==L&&window.htcSetLang)window.htcSetLang(b.getAttribute("data-gl"));};});
+  var lg=document.querySelector(".g-lng");if(lg&&/^https?:$/.test(location.protocol))lg.hidden=false;
   if(!ok){g.hidden=false;setTimeout(function(){var i=document.getElementById("gIn");if(i)i.focus();},300);}
   document.getElementById("gForm").addEventListener("submit",function(e){e.preventDefault();
     if(H.indexOf(h("mrd|"+norm(document.getElementById("gIn").value)))>-1){try{localStorage.setItem(OK,"1");}catch(e){}g.hidden=true;}
